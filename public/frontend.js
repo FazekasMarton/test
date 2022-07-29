@@ -24,7 +24,7 @@ function press(){
         body: JSON.stringify(data)
     }
     fetch('/data', options) */
-    fetch('http://localhost:7000/data')
+    fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data));
 }
