@@ -15,4 +15,16 @@ const data = [
         sex: "m"
     }
 ]
-module.exports = data;
+function press(){
+    /* var options = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    }
+    fetch('/data', options) */
+    fetch('http://localhost:7000/data')
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}

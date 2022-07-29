@@ -3,11 +3,11 @@ const express = require("express");
 const { url } = require("inspector");
 const path = require("path")
 const app = express()
-//const port = 7000;
-const port = process.env.PORT || 7000;
+const port = 7000;
+//const port = process.env.PORT || 7000;
 const cors = require("cors");
 
-let data = require("./public/frontend.js");
+let data = {name: "Herold"}
 app.use(express.json())
 
 // Server static files.
@@ -28,20 +28,35 @@ app.listen(port, () => {
     console.log("My app listen in: " + port);
 });
 
+
+//--------------------------
+const backdata = [
+    {
+        name: "cap",
+        size: 12,
+        color: "red"
+    },
+    {
+        name: "shirt",
+        size: 18,
+        color: "black" 
+    },
+    {
+        ownername: data
+    }
+]
+
+//---------------------------
+
 const addListing = (newItem) => {
-    data = [...data, newItem]
+    backdata = [...backdata, newItem]
 }
 
 const findListing = (id) => {
-    return data.find(item => item.id === Number(id))
+    return backdata.find(item => item.id === Number(id))
 }
 
 app.get("/data", (req, res) => {
-    res.send(data)
-});
-
-app.post("/data", (req, res) => {
-    addListing(req, res)
-    res.status(201).send(data)
+    res.send(backdata)
 });
 
