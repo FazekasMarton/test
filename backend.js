@@ -48,13 +48,13 @@ const backdata = [
 
 //---------------------------
 
-const addListing = (newItem) => {
+/* const addListing = (newItem) => {
     backdata = [...backdata, newItem]
 }
 
 const findListing = (id) => {
     return backdata.find(item => item.id === Number(id))
-}
+} */
 
 app.get("/data", (req, res) => {
     res.send(backdata)
