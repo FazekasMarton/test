@@ -9,6 +9,7 @@ const cors = require("cors");
 
 let data = {name: "Herold"}
 app.use(express.json())
+app.use(express.urlencoded())
 
 // Server static files.
 app.use(express.static("public"))
@@ -60,11 +61,30 @@ var keve = [
     },
 ]
 
-app.post("/", function(request, response, next){
-    response.send(request.body)
-    keve=request.body
+
+
+
+app.post("/action", (request, response) => {
+    console.log(request.body)
+    keve = request.body
+    let indexPath = path.join(
+        __dirname,
+        "./html/next.html"
+    );
+    console.log(indexPath);
+    response.sendFile(indexPath);
 })
+
 
 app.get("/data", (req, res) => {
     res.send(keve)
 });
+
+
+
+
+
+
+
+
+
