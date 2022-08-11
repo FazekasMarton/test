@@ -57,6 +57,6 @@ const findListing = (id) => {
 }
 
 app.get("/data", (req, res) => {
-    res.send()
+    res.send(backdata)
 });
 
