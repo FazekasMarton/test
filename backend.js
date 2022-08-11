@@ -3,8 +3,8 @@ const express = require("express");
 const { url } = require("inspector");
 const path = require("path")
 const app = express()
-//const port = 7000;
-const port = process.env.PORT || 7000;
+const port = 7000;
+//const port = process.env.PORT || 7000;
 const cors = require("cors");
 
 let data = {name: "Herold"}
@@ -57,6 +57,6 @@ const findListing = (id) => {
 }
 
 app.get("/data", (req, res) => {
-    res.send(backdata)
+    res.send()
 });
 
