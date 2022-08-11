@@ -47,12 +47,14 @@ const backdata = [
 ]
 
 //---------------------------
-
-/* app.get("/data", (req, res) => {
-    res.send(backdata)
-}); */
+var keve = "asd"
 
 app.post("/", function(request, response, next){
     response.send(request.body)
+    keve=request.body
 })
+
+app.get("/data", (req, res) => {
+    res.send(keve)
+});
 

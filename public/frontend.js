@@ -18,8 +18,8 @@ const data = [
 function press(){
 
 
-    
-/*     fetch('https://guideianangel.herokuapp.com/data')
+
+fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
-    .then((data) => console.log(data)); */
+    .then((data) => console.log(data));
 }
