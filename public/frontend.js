@@ -20,4 +20,6 @@ function press(){
 fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data));
+
+document.body.style.backgroundColor="blue"
 }
