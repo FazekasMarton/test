@@ -47,7 +47,18 @@ const backdata = [
 ]
 
 //---------------------------
-var keve = "asd"
+var keve = [
+    {
+        name: "cap",
+        size: 12,
+        color: "red"
+    },
+    {
+        name: "shirt",
+        size: 18,
+        color: "black" 
+    },
+]
 
 app.post("/", function(request, response, next){
     response.send(request.body)
