@@ -19,5 +19,7 @@ function press(){
 
 fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
-    .then((data) => document.getElementById("text").innerText(data["fname"]+" "+data["lname"]));
+    .then((data) => function(){
+    document.getElementById("text").innerText(data["fname"]+" "+data["lname"])
+    });
 }
