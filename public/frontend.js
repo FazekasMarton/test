@@ -16,6 +16,7 @@ const data = [
     }
 ]
 function press(){
+    var xhttp = new XMLHttpRequest();
     var send = { "name":"John", "age":30, "car":null };
     var sendString = JSON.stringify(send);
     alert(sendString);
