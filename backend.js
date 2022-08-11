@@ -52,16 +52,11 @@ const backdata = [
     res.send(backdata)
 }); */
 
-var bodyParser=require("body-parser");
-
-// Process application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: true}))
-
-// Process application/json
-app.use(bodyParser.json());
-
-app.post('/createEmp', function(req, res){  
-//now req.body will be populated with the object you sent
-console.log(req.body.name); //prints john
-});
+// Handling request 
+app.post("/request", (req, res) => {
+    res.json([{
+       name_recieved: req.body.name,
+       designation_recieved: req.body.designation
+    }])
+ })
 

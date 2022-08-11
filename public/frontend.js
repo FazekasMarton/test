@@ -16,11 +16,14 @@ const data = [
     }
 ]
 function press(){
-    var xhttp = new XMLHttpRequest();
-    var send = { "name":"John", "age":30, "car":null };
-    var sendString = JSON.stringify(send);
-    alert(sendString);
-    xhttp.send(sendString);
+    $.post("/request",
+    {
+       name: "viSion",
+       designation: "Professional gamer"
+    },
+    function (data, status) {
+       console.log(data);
+    });
 /*     fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data)); */
