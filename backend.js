@@ -62,10 +62,10 @@ var keve = [
 
 app.post("/", function(request, response, next){
     response.send(request.body)
-    keve=request.body
+    var datasend=request.body
+    app.get("/data", (req, res) => {
+        res.send(datasend)
+    });
 })
 
-app.get("/data", (req, res) => {
-    res.send(keve)
-});
 
