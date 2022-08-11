@@ -16,15 +16,11 @@ const data = [
     }
 ]
 function press(){
-/*     var options = {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    }
-    fetch('/data', options) */
-    fetch('https://guideianangel.herokuapp.com/data')
+    var send = { "name":"John", "age":30, "car":null };
+    var sendString = JSON.stringify(send);
+    alert(sendString);
+    xhttp.send(send);
+/*     fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data)); */
 }

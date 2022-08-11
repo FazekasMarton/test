@@ -48,15 +48,20 @@ const backdata = [
 
 //---------------------------
 
-/* const addListing = (newItem) => {
-    backdata = [...backdata, newItem]
-}
-
-const findListing = (id) => {
-    return backdata.find(item => item.id === Number(id))
-} */
-
-app.get("/data", (req, res) => {
+/* app.get("/data", (req, res) => {
     res.send(backdata)
+}); */
+
+var bodyParser=require("body-parser");
+
+// Process application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true}))
+
+// Process application/json
+app.use(bodyParser.json());
+
+app.post('/createEmp', function(req, res){  
+//now req.body will be populated with the object you sent
+console.log(req.body.name); //prints john
 });
 
