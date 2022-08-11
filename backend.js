@@ -52,11 +52,7 @@ const backdata = [
     res.send(backdata)
 }); */
 
-// Handling request 
-app.post("/request", (req, res) => {
-    res.json([{
-       name_recieved: req.body.name,
-       designation_recieved: req.body.designation
-    }])
- })
+app.post("/", function(request, response, next){
+    response.send(request.body)
+})
 

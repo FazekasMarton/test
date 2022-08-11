@@ -16,14 +16,9 @@ const data = [
     }
 ]
 function press(){
-    $.post("/request",
-    {
-       name: "viSion",
-       designation: "Professional gamer"
-    },
-    function (data, status) {
-       console.log(data);
-    });
+
+
+    
 /*     fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data)); */
