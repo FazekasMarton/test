@@ -19,7 +19,7 @@ function press(){
     var send = { "name":"John", "age":30, "car":null };
     var sendString = JSON.stringify(send);
     alert(sendString);
-    xhttp.send(send);
+    xhttp.send(sendString);
 /*     fetch('https://guideianangel.herokuapp.com/data')
     .then((response) => response.json())
     .then((data) => console.log(data)); */
